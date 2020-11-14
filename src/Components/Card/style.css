@@ -1,0 +1,60 @@
+div.card {
+  width: 18rem;
+  padding: 10px;
+}
+div.card img {
+  object-fit: cover;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.borderRotation {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0.1rem;
+}
+.borderRotation::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  animation: rotate 1.7s linear infinite;
+}
+.borderRotation::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 7px);
+  height: calc(100% - 7px);
+  background: white;
+  border-radius: 5px;
+}

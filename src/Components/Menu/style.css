@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--searchBar);
+  height: 70px;
+}
+.searchBar {
+  margin: auto 65px auto 0;
+}
+.searchBar input {
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
+}
